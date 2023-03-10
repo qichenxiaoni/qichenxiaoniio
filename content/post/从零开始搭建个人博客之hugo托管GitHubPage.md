@@ -13,7 +13,6 @@ categories : [
 1.  写Markdown文件；
 2.  通过hugo架构提供的语法将Markdown文件编译成html文件，html文件就是在浏览器中可以展示的文件
 3.  把编译出来的html文件发布到服务器或者网站托管平台
-
 我们可以通过上面的三步生成一个只属于自己的个人博客，是不是非常的简单呢，那么，跟着我一起来使用hugo搭建一个属于自己的个人博客吧。
 ## 具体流程
 在上一篇博客中，我们已经简单的学习了一下如何搭建个人博客，在这一篇博客中，我们来学习一下如何将我们搭建的个人博客托管到github pages中，首先我们先来了解一下什么是github pages。
@@ -23,10 +22,10 @@ GitHub Pages是一项服务，它允许用户将静态网站托管在GitHub上�
 ### 创建GitHub Page
 首先要想使用Github Pages，就必须要有一个GItHub账号，如果没有Github账号，可以[点击此链接](https://www.github.com)跳转注册一个。
 当我们登录Github之后，点击New创建一个新的Repository，命名为{your_username}.github.io，记住，这里的名字一定是你的用户名，如果不是的话，会无法进行下一步操作。
-![图片](/img/image1.png)
+![图片](/img/img2/image1.png)
 因为我这里已经创建好了，所以它会显示已经创建，格外需要注意的是Repo的权限一定是要Public，如果选择private，后面就会出现无法访问，同样记得勾选上`Add a README.md`，这样做的原因是为了自动创建main分支。
 然后找到你刚刚创建好的仓库，点进去，选择上面的Settings，在左边的菜单栏中选择Pages，如果跟我的不一样，没有关系，这是因为Github Pages还在自动帮我们部署网站，只需要稍等片刻即可。
-![图片](/img/image2.png)
+![图片](/img/img2/image2.png)
 当看到Your site is live at https://******.github.io/时就说明你的GitHub Pages自动部署好了，这时点击Visit Site就可以看到我们的网站了，当然了因为这时候我们的仓库中空的，所以这时候的网站也是空的，只会显示yourusername.github.io
 ### 搭建Hugo站点
 #### hugo站点和目标文件
@@ -63,9 +62,9 @@ cn@Resucer:~/Documents/Code TMP/qichenxiaoni.github.io$ git status
 cn@Resucer:~/Documents/Code TMP/qichenxiaoni.github.io$ git commit -m "two commit"
 cn@Resucer:~/Documents/Code TMP/qichenxiaoni.github.io$ git push
 ```
-![图片](/img/image3.png)
+![图片](/img/img2/image3.png)
 如果在执行`Git commit -m “first commit”`的时候报错，显示作者身份未知，显示如下信息的时候，我们可以根据上面的提示，分别执行下面这两条命令之后再执行一次`Git commit -m “first commit”`
-![](/img/image4.png)
+![图片](/img/img2/image4.png)
 ```
 git config --global user.email "you@example.com"(注册GitHub的邮箱)
 git config --global user.name "Your Name" (Github的用户名)
@@ -115,7 +114,7 @@ git remote add origin git@github.com:qichenxiaoni/qichenxiaoniio.git
 git push -u origin main
 ```
 如果你在执行`Git add *`这一条指令的时候出现这一类消息的时候，可以使用git status，如果执行完git status之后，显示有未跟踪的文件，可以单独使用`git add ‘文件名’`
-![](/img/image5.png)
+![图片](/img/img2/image5.png)
 这个时候你的源文件就上传到Github的一个新的仓库了。这是用来保存源文件的。而**{your_username}.github.io**是用来保存网站的目标文件的。
 由于有人不了解如何在修改了源文件之后保存到Github中，因此下面是具体步骤
 ```

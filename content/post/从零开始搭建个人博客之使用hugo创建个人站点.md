@@ -23,14 +23,14 @@ categories : [
 sudo apt install hugo
 hugo version
 ```
-![图片](/img/hugo%20version.png)
+![图片](/img/img1/image1.png)
 ### 创建站点
 ```
 hugo new site qichenxiaoni
 cd qichenxiaoni
 ls
 ```
-![图片](/img/ls.png)
+![图片](/img/img1/image2.png)
 
 **简单的介绍一下目录中的部分文件**
 **config.toml** 是配置文件，在里面可以定义博客地址，构建配置，标题，导航栏等等。
@@ -94,16 +94,16 @@ logoTitle = "小陈的博客"        # default: the title value    # 默认值: 
 hugo new post/first-post.md
 ```
 ==当我们生成了新的 md 文件时，它会自动生成一些行，我们可以看到它的 draft 选项后面接的是 true，当它是 true 的时候是默认不渲染的，如果需要渲染的话，我们可以将 true 改成 false，这样就可以渲染了，但是我们在这里直接将 draft 选项注释掉，然后加上 markdown 语法就 OK 了。后续可以直接自己直接在编辑器里面。content/post/目录下创建 md 文件来写博客，比较方便。也可以在 post 里面创建多层目录，方便归类。==
-~[图片](/qichenxiaoni/static/img/first-post.png)
+![图片](/img/img1/image3.png)
 **温馨提示**：
 	如果我们里面要插入图片的话，我们需要在 static 目录下创建存放图片的文件夹，一般命名为 image 或 img。
 #### 发布博客
 ```
 hugo server
 ```
-![图片](/img/hugo%20server.png)
+![图片](/img/img1/image4.png)
 如果我们执行 `hugo server` 没有报错的话，就说明发布成功，我们就可以在浏览器中输入 `localshot:1313` 来查看我们的第一篇博客啦。
-![](/img/%E5%8F%91%E5%B8%83%E6%88%90%E5%8A%9F.png)
+![图片](/img/img1/image5.png)
 至此，个人博客就初步的搭建出来了，你也可以自己去尝试一下通过 config.toml 中的注释来修改一下主题的配置，例如将页面下面的图标改成自己需要的，不用担心需要重新启动 hugo，因为 hugo 是立即生效的。
 
 下一篇具体讲述如何将hugo博客托管到github pages中，为什么要托管到github pages的原因。
