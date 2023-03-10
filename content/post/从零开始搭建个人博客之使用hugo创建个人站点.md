@@ -1,4 +1,11 @@
-
+---
+title: "从零开始搭建个人博客之使用hugo创建个人站点"
+date: 2023-03-10T23:55:54+08:00
+# draft: true
+categories : [
+    "hugo",
+]
+---
 ## 前言
 [Hugo](https://gohugo.io/)是一款快速，现代化且高度可配置的静态网站生成器。它是一个基于命令行的工具，用于将Markdown等文本格式转换为静态网站。Hugo使用Go语言编写，因此它非常快。Hugo的主要优点是构建速度非常快，因为它是一个静态网站生成器，没有必要运行数据库或其他服务。
 使用Hugo创建个人博客的主要优势在于它非常快速、易于配置，并且生成的网站可以直接部署到任何Web服务器上，而不需要运行数据库或其他服务。此外，Hugo提供了大量的主题和插件，可以轻松地自定义您的个人博客。它还支持各种文本格式，包括Markdown，AsciiDoc和Org-mode，以及多种语言，包括中文。
@@ -15,14 +22,14 @@
 sudo apt install hugo
 hugo version
 ```
-![[hugo version.png]]
+![图片](/qichenxiaoni/static/img/hugo%20version.png)
 ### 创建站点
 ```
 hugo new site qichenxiaoni
 cd qichenxiaoni
 ls
 ```
-![[ls.png]]
+![图片](/qichenxiaoni/static/img/ls.png)
 简单的介绍一下目录中的部分文件
 **config.toml** 是配置文件，在里面可以定义博客地址，构建配置，标题，导航栏等等。
 **themes**是主题目录，可以下载喜欢的主题，然后配置在**config.toml**里面。
@@ -85,14 +92,14 @@ logoTitle = "小陈的博客"        # default: the title value    # 默认值: 
 hugo new post/first-post.md
 ```
 ==当我们生成了新的 md 文件时，它会自动生成一些行，我们可以看到它的 draft 选项后面接的是 true，当它是 true 的时候是默认不渲染的，如果需要渲染的话，我们可以将 true 改成 false，这样就可以渲染了，但是我们在这里直接将 draft 选项注释掉，然后加上 markdown 语法就 OK 了。后续可以直接自己直接在编辑器里面。content/post/目录下创建 md 文件来写博客，比较方便。也可以在 post 里面创建多层目录，方便归类。==
-![[first-post.png]]
+~[图片](/qichenxiaoni/static/img/first-post.png)
 **温馨提示**：
 	如果我们里面要插入图片的话，我们需要在 static 目录下创建存放图片的文件夹，一般命名为 image 或 img。
 #### 发布博客
 ```
 hugo server
 ```
-![[hugo server.png]]
+![图片](/qichenxiaoni/static/img/hugo%20server.png)
 如果我们执行 `hugo server` 没有报错的话，就说明发布成功，我们就可以在浏览器中输入 `localshot:1313` 来查看我们的第一篇博客啦。
 ![[发布成功.png]]
 至此，个人博客就初步的搭建出来了，你也可以自己去尝试一下通过 config.toml 中的注释来修改一下主题的配置，例如将页面下面的图标改成自己需要的，不用担心需要重新启动 hugo，因为 hugo 是立即生效的。
@@ -101,5 +108,4 @@ hugo server
 
 <全文完>
 
-> [!NOTE] 
 > 本文参考教程：[码农在新加坡的个人博客](https://leftpocket.cn/post/hugo/hugo_creation/)
