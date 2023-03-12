@@ -69,7 +69,7 @@ Import之后，我们基本上没有什么需要修改的了，只需要我们�
 
 点击右上角的笔的图标，这样就可以进行修改了，主要看个人喜好，以下是我个人配置。
 
----
+```
 修改主题
 THEME: process.env.NEXT_PUBLIC_THEME || 'hexo', // 主题， 支持 ['next','hexo',"fukasawa','medium','example'] @see https://preview.tangly1024.com
 修改个人信息
@@ -86,7 +86,7 @@ THEME: process.env.NEXT_PUBLIC_THEME || 'hexo', // 主题， 支持 ['next','hex
   SAKURA: process.env.NEXT_PUBLIC_SAKURA || true, // 开关
   是否开启音乐插件
     MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || true, // 是否使用音乐播放插件
----
+```
 
 修改完之后滑到最下端，点击`Commit changes`，保存修改。
 
